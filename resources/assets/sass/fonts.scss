@@ -1,0 +1,35 @@
+/*font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif*/
+
+
+.unbuntu{ font-family: Ubuntu; }
+.roboto{ font-family: Roboto Condensed; }
+.oxygen-mono { font-family: 'Oxygen Mono', monospace; }
+.oxygen { font-family: 'Oxygen', sans-serif !important; }
+.playfair { font-family: Playfair Display; }
+.bellefair { font-family: 'Bellefair', serif; }
+.courgette { font-family: 'Courgette', cursive; }
+.romanesco { font-family: 'Romanesco', cursive; }
+.vibes { font-family: 'Great Vibes', cursive; }
+.abril { font-family: 'Abril Fatface', cursive; }
+.lobster { font-family: 'Lobster', cursive; }
+.limelight { font-family: 'Limelight', cursive; }
+.open { font-family: 'Open Sans Condensed', sans-serif; }
+.yanone { font-family: 'Yanone Kaffeesatz', sans-serif; }
+.anton { font-family: Anton, "Helvetica Neue"; }
+
+.helvetica { font-family: "Helvetica Neue" !important}
+
+.open-sans { font-family: 'Open Sans', "Helvetica Neue" !important}
+
+@font-face {
+    font-family: bebas;
+    src: url('/fonts/otf.tff');
+}
+
+@font-face {
+    font-family: GT;
+    src: url('/fonts/GTWalsheimBlack.tff');
+}
+
+.gt { font-family: GT }
+.bebas { color: white; font-family: Anton !important; text-transform:uppercase!important;font-size:5rem; }

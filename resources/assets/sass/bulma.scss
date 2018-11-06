@@ -1,0 +1,59 @@
+// BULMA
+//@import '~bulma';
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+//$primary: #8c67ef;
+//$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+$custom-5: #4a4a4a;
+$custom-invert-5: findColorInvert($custom-5);
+
+$custom-4: rgb(100, 115, 112);
+$custom-invert-4: findColorInvert($custom-4);
+$custom-3: rgb(149, 166, 161);
+$custom-invert-3: findColorInvert($custom-3);
+$custom-2: rgb(215, 224, 219);
+$custom-invert-2: findColorInvert($custom-2);
+$custom-1: rgb(240, 245, 242);
+$custom-invert-1: findColorInvert($custom-1);
+
+$custom-red: #F03861;
+$custom-invert-red: findColorInvert($custom-1);
+
+
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert),
+    "custom-5" : ($custom-5, $custom-invert-5),
+    "custom-4" : ($custom-4, $custom-invert-4),
+    "custom-3" : ($custom-3, $custom-invert-3),
+    "custom-2" : ($custom-2, $custom-invert-2),
+    "custom-1" : ($custom-1, $custom-invert-1),
+    "custom-red" : ($custom-red, $custom-invert-red),
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+$tooltip-max-width : 10rem;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import '~bulma-tooltip/dist/css/bulma-tooltip.sass';

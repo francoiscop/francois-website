@@ -1,0 +1,316 @@
+html, body{
+  height:100%;
+  margin: 0;
+}
+
+body {
+	font-size: 18px;
+	font-family: 'Yanone Kaffeesatz', "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app{
+  min-height: 100vh;
+  position: relative;
+  top: 0;
+  margin: 0;
+}
+
+.app--padding{
+  padding-top: 4.25rem;
+}
+
+#content{
+  height: 100vh;
+}
+.container{
+  height: 100%;
+}
+
+/*
+|
+|
+| NAVBAR
+|
+|
+*/
+.nav-header {
+  height:4.25rem;
+  border-bottom: 0px solid rgba(238,238,238,1);
+}
+/* navbar mobile */
+#nav-header-target{
+  border: 0px solid #ced4da;
+  position: relative;
+  z-index: 3000;
+  width:auto!important;
+  float: right;
+}
+
+/*
+|
+|
+| NAVBAR USER
+|
+|
+*/
+
+/*
+|
+|
+| VIDEO
+|
+|
+*/
+.video-index{
+  min-width: 220px;
+  height: 314px;
+  position: relative;
+  overflow: hidden;
+
+  /* if there is no cover image, the width extend accordingly to the inner video height set to 100% */
+}
+.video-index--fullwidth{
+  min-width: 100%;
+}
+
+/*
+|
+|
+| NAVBAR ROUTES
+|
+|
+*/
+.route-navbar{
+  border:0px solid red;
+  display: flex;
+  min-height: 5.25rem;
+  align-itemsxxxx: stretch;
+  flex-wrap: wrap;
+}
+
+.route-navbar-start a{
+  border: 0px solid blue;
+  cursor: pointer;
+
+  color: #4a4a4a;
+    displayx: block;
+    line-height: 1.8;
+    padding: 0.5rem 0.75rem;
+    positionx: relative;
+}
+.route-navbar-start a:hover{
+  color: #3273dc;
+  }
+.route-navbar-end{
+  align-itemsx: stretch;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.router-link-active,
+ .router-link-exact-active {
+   background-colorxxx: indianred;
+   cursor: context-menu;
+   border-bottom: 4px solid #3273dc !important;
+}
+
+/*
+|
+|
+| FOOTER
+|
+|
+*/
+
+section.footer{
+  border-top: 0px solid hsl(0, 0%, 71%);
+  width: 100%;
+  background-color: white;
+}
+
+section.footer.footer--sticky{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+/*
+|
+|
+| COVER
+|
+|
+*/
+.edit-poster{
+    opacity:0;
+}
+[class^="aspect__ratio"]:hover .edit-poster{
+    opacity:1;
+}
+[class^="aspect__ratio"].aspect__ratio--editable:hover > :first-child::after{
+    content:'';
+    display:block;
+    height:100%;
+    width:100%;
+    background-color:rgba(40,40,40,0.4);
+}
+[class^="aspect__ratio"].aspect__ratio--editable-round:hover > :first-child::after{
+    content:'';
+    display:block;
+    height:100%;
+    width:100%;
+    background-color:rgba(40,40,40,0.4);
+    border-radius: 50%;
+}
+[class^="aspect__ratio"].aspect__ratio--has-bg > :first-child::before{
+    position: absolute;
+    top:0;
+    left:0;
+    content:'';
+    display:block;
+    height:100%;
+    width:100%;
+    background-color:rgba(40,40,40,0.6);
+}
+
+.cover{
+    border:1px solid hsl(0, 0%, 92%);
+}
+
+
+.edit-icon{
+
+  text-shadow: 0px 2px 2px rgba(20, 27, 32, 0.5);
+
+  color: rgb(240, 245, 242);
+}
+
+
+
+
+/*
+|
+|
+| ICONS
+|
+|
+*/
+[class^='s-icon'], [class*=' s-icon']{
+  border:0px solid green;
+  height:50px;
+  width:50px;
+  display:inline-block;
+  background-size: 50px 50px;
+  margin-right:5px;
+}
+
+.s-icon-not-found{
+
+  background-image: url('/css/_icons/404.png');
+
+}
+
+.s-icon-play{
+
+  background-image: url('/css/_icons/play.png');
+  margin: 0;padding: 10px;
+  border:1px solid rgba(30,30,30,1);
+
+
+}
+
+s-icon--50{
+  height:50px;
+  width:50px;
+  background-size: 50px 50px;
+}
+s-icon--200{
+
+  height:200px;
+  width:200px;
+  background-size: 200px 200px;
+  
+}
+
+/*
+|
+|
+| NOT FOUND
+|
+|
+*/
+
+.not-found{
+  border:0px solid red;
+  line-heightx:50px;
+  font-family:Anton;
+  font-size:1.5rem;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .wrapper-video{ height: 270px; }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper-video{ height: 240px; }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper-video{ height: 200px; }
+}
+
+
+.column {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.container {
+  max-width: 4000px;
+  width: auto;
+}
+.navbar .container {
+  max-width: 960px;
+}
+
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+   border: 0px solid blue;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   width: 200vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   /*min-height: 100vh;*/
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   min-width: 250.77vh;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 0px solid green;
+
+
+   max-width: 100vw;
+}
+
+@media screen and (min-width: 1920px) {
+  .vimeo-wrapper iframe {
+    max-width: 1920px;
+  }
+}

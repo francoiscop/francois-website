@@ -1,0 +1,132 @@
+laravel new XXX
+
+/usr/local/bin/composer
+
+php artisan make:auth
+
+#admin1: https://github.com/z-song/laravel-admin
+
+/usr/local/bin/composer require encore/laravel-admin
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+
+[config/admin.php]
+
+php artisan admin:install
+
+//----EXTENSIONS:
+
+#http://laravel-admin.org/docs/#/en/extension-helpers?id=helpers::
+/usr/local/bin/composer require laravel-admin-ext/helpers
+php artisan admin:import helpers
+
+
+#admin2: http://laraadmin.com/docs/1.0/installation
+
+/usr/local/bin/composer require "dwij/laraadmin:1.0.40"
+'providers' => [
+	...
+	Dwij\Laraadmin\LAProvider::class
+],
+php artisan la:install
+
+
+#image manipulation: http://image.intervention.io/
+
+/usr/local/bin/composer require intervention/image
+[Intervention\Image\ImageServiceProvider::class]
+['Image' => Intervention\Image\Facades\Image::class,]
+
+#Captcha: https://github.com/mewebstudio/captcha
+
+/* valid js compile:::: */
+app.js
+
+ply.js
+
+form.js
+
+route.js
+
+home.js
+
+profile.js
+	Vue.component('error', require('./components/social/error.vue'));
+	Vue.component('vs-comment-input', require('./components/social/commentInput.vue'));
+	Vue.component('vs-comment', require('./components/social/comment.vue'));
+		import objectComponent from './object.vue'
+			import Comments from '../../store/classes/comments'
+			import more from './buttons/buttonMore.vue'
+			import rating from './rating.vue'
+	Vue.component('vs-comments', require('./components/social/comments.vue'));
+		import error from './error.vue'
+		import more from './buttons/buttonMore.vue'
+		import {mixError} from './mixins/mixError'
+	Vue.component('vs-editor', require('./components/editor/editor.vue'));
+	Vue.component('vs-feed', require('./components/social/feed.vue'));
+		import objectComponent from './object.vue'
+		import aggregates from './aggregates.vue'
+	Vue.component('vs-feeds', require('./components/social/feeds.vue'));
+		import error from './error.vue'
+		import {mixError} from './mixins/mixError'
+		import scroll from '../../mixins/scroll.js'
+	Vue.component('vs-reviews', require('./components/social/reviews.vue'));
+	Vue.component('vs-buttons', require('./components/social/buttons/buttonsControl.vue'));
+
+
+
+
+
+
+/usr/local/bin/composer require mews/captcha
+[Mews\Captcha\CaptchaServiceProvider::class,]
+['Captcha' => Mews\Captcha\Facades\Captcha::class,]
+
+
+#FFMPEG : https://packagist.org/packages/linkthrow/ffmpeg
+
+/usr/local/bin/composer require linkthrow/ffmpeg
+php artisan vendor:publish
+[LinkThrow\Ffmpeg\Provider\FfmpegServiceProvider::class]
+['FFMPEG' => LinkThrow\Ffmpeg\Facade\FfmpegFacade::class,]
+
+
+#DEBUGGAR
+
+/usr/local/bin/composer require barryvdh/laravel-debugbar --dev
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+[Barryvdh\Debugbar\ServiceProvider::class,]
+['Debugbar' => Barryvdh\Debugbar\Facade::class,]
+
+
+######################################################################################
+php artisan vendor:publish
+
+-> Create new folder in htdocs/plublic_html : _XXXX
+-> Copy public directory to folder : _xxxxx
+
+
+-> .env : DATABASE + APP_NAME + DEBUG + APP_FOLDER : _XXXX
+-> Create GoPublic.php
+-> UPDATE bootstrap/app.php ----> GoPublic
+-> UPDATE public/index.php !!!!!
+-> UPDATE deploy.sh
+-> RUN sh deploy.sh
+-> Create App/Providers/ConfigServiceProvider.php
+-> Create App/Helpers/Helper.php
+-> UPDATE AppServiceProvider.php (Blade directive + Helpers) -> DO NOT FORGET TO IMPORT ALL CLASSES
+-> create app/Classes
+-> create app/Http/Requests/uploadRequest.php
+-> create app/Validators/customRules.php
+-> UPDATE config/auth.php -> RESERVED NAMES
+-> copy app/Setting
+
+-> SET config/database.php -> mysql strict to FALSE
+
+------------------------->>>>>>>> DO NOT FORGET .HTACCESS (in index)
+
+
+
+#FFMPEG ::::!!!
+DO NOT FORGET UPDATE PATH OF FFMPEG + FFPROBE IN CONFIG/FFMEPG.PHP
+DO NOT FORGET TO CORRECT FILE CLASS FFMPEG
+
